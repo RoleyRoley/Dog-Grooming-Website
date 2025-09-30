@@ -1,0 +1,5 @@
+.services-page {
+  padding: var(--spacing-lg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
