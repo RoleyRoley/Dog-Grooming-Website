@@ -1,0 +1,25 @@
+.slick-dots {
+    bottom: -32px;
+}
+
+.slick-dots li button:before {
+    display: none;
+}
+
+.slick-dots li {
+    margin: 0 6px;
+}
+
+.slick-dots li.slick-active div {
+    opacity: 1 !important;
+    background: #FF69B4 !important;
+}
+
+.slick-slide {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slick-slide.slick-active {
+    opacity: 1;
+}
