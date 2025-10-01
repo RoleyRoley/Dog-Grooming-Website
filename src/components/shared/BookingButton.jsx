@@ -1,28 +1,14 @@
 import React from 'react';
 
-const BookingButton = () => {
-    const handleBooking = () => {
-        window.open('https://third-party-booking-system.com', '_blank');
-    };
-
-    return (
-        <button onClick={handleBooking} style={styles.button}>
-            Book Now
-        </button>
-    );
-};
-
-const styles = {
-    button: {
-        backgroundColor: '#ff69b4', // Pink color
-        color: '#fff', // White text
-        border: 'none',
-        borderRadius: '5px',
-        padding: '10px 20px',
-        cursor: 'pointer',
-        fontSize: '16px',
-        transition: 'background-color 0.3s',
-    },
-};
+const BookingButton = ({ className = '' }) => (
+    <a
+        href="https://app.toplinedogs.co.uk/public/online-bookings?salon=MmYzMmY5OWYtNjg3Yi00ODM0LTczYjItMDhkYzI4NzgwMTc5"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+    >
+        Book Now
+    </a>
+);
 
 export default BookingButton;

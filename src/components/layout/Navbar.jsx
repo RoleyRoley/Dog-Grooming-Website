@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/social media logo salon.png';
+import BookingButton from '../shared/BookingButton';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,12 +40,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Link
-              to="/booking"
-              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all duration-200"
-            >
-              Book Now
-            </Link>
+            <BookingButton className="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300" />
           </div>
 
           {/* Mobile Menu Button */}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import dogGrooming from '../../assets/images/IMG_7295.jpeg';
 import './Hero.css';
+import BookingButton from '../shared/BookingButton';
 
 const Hero = () => {
     return (
@@ -26,12 +27,7 @@ const Hero = () => {
                         Giving your furry friends the care and style they deserve
                     </p>
                     <div className="space-x-4">
-                        <Link
-                            to="/booking"
-                            className="bg-primary hover:bg-opacity-90 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300"
-                        >
-                            Book Now
-                        </Link>
+                        <BookingButton className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300"/>
                         <Link
                             to="/services"
                             className="bg-white hover:bg-opacity-90 text-primary px-8 py-3 rounded-full font-semibold transition-all duration-300"
