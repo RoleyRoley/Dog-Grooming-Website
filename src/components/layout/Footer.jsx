@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/images/social media logo salon.png';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -18,9 +19,9 @@ const Footer = () => {
           {/* Left: Logo only */}
           <div className="flex justify-center md:justify-start items-center md:w-1/3 pl-0 md:pl-8">
             <img
-              src="/src/assets/images/social media logo salon.png"
+              src={logo}
               alt="Paw Perfect Logo"
-              className="h-40 w-40 rounded-full object-cover"
+              className="h-32 w-32 rounded-full object-cover"
             />
           </div>
 

@@ -4,42 +4,46 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Reviews.css';
 
+import img1 from '../../assets/images/IMG_1477.jpeg';
+import img2 from '../../assets/images/IMG_2149.jpeg';
+import img3 from '../../assets/images/IMG_7295.jpeg';
+
 const testimonials = [
     {
         name: "Sarah Johnson",
         review: "Absolutely fantastic service! My dog always comes back looking and smelling amazing. The staff are so caring and professional.",
         rating: 5,
-        image: "/src/assets/images/IMG_1477.jpeg"
+        image: img1
     },
     {
         name: "Mark Wilson",
         review: "Best grooming salon in the area. They really understand different breed requirements and are so gentle with nervous dogs.",
         rating: 5,
-        image: "/src/assets/images/IMG_2149.jpeg"
+        image: img2
     },
     {
         name: "Emma Thompson",
         review: "I wouldn't trust anyone else with my furry friend. The attention to detail is outstanding.",
         rating: 5,
-        image: "/src/assets/images/IMG_7295.jpeg"
+        image: img3
     },
     {
         name: "Sarah Johnson 2",
         review: "Absolutely fantastic service! My dog always comes back looking and smelling amazing. The staff are so caring and professional.",
         rating: 5,
-        image: "/src/assets/images/IMG_1477.jpeg"
+        image: img1
     },
     {
         name: "Mark Wilson 3",
         review: "Best grooming salon in the area. They really understand different breed requirements and are so gentle with nervous dogs.",
         rating: 5,
-        image: "/src/assets/images/IMG_2149.jpeg"
+        image: img2
     },
     {
         name: "Emma Thompson 4",
         review: "I wouldn't trust anyone else with my furry friend. The attention to detail is outstanding.",
         rating: 5,
-        image: "/src/assets/images/IMG_7295.jpeg"
+        image: img3
     },
 ];
 
