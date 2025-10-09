@@ -14,22 +14,22 @@ const Contact = () => {
                     <div className="flex-1 flex flex-col gap-6 justify-center items-center md:items-start text-center md:text-left">
                         <div>
                             <h2 className="text-lg sm:text-xl font-semibold text-secondary mb-1">Email</h2>
-                            <a href="mailto:info@doggroomingbusiness.com" className="text-primary underline text-base sm:text-lg break-all">
-                                info@doggroomingbusiness.com
+                            <a href="mailto:thedogandcollar@gmail.com" className="text-primary underline text-base sm:text-lg break-all">
+                                thedogandcollar@gmail.com
                             </a>
                         </div>
                         <div>
                             <h2 className="text-lg sm:text-xl font-semibold text-secondary mb-1">Phone</h2>
-                            <a href="tel:01234567890" className="text-primary underline text-base sm:text-lg">
-                                (01234) 567890
+                            <a href="tel:07541623364" className="text-primary underline text-base sm:text-lg">
+                                (+44) 7541 623364
                             </a>
                         </div>
                         <div>
                             <h2 className="text-lg sm:text-xl font-semibold text-secondary mb-1">Address</h2>
                             <address className="not-italic text-base sm:text-lg text-gray-700 leading-relaxed">
-                                123 Dog Lane<br />
-                                Pet City<br />
-                                PC1 2AB
+                                95 High Street<br />
+                                Haverhill, Suffolk<br />
+                                CB9 8AN
                             </address>
                         </div>
                         <div>
