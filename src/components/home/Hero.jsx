@@ -11,10 +11,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="relative h-screen"
+            className="relative h-screen lg:pt-3"
         >
             {/* Background Image with negative margin to offset navbar */}
-            <div className="absolute inset-0 -mt-16">
+            <div className="absolute inset-0">
                 <img
                     src={dogGrooming}
                     alt="Dog Grooming"
