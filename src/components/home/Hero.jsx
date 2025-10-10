@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import dogGrooming from '../../assets/images/IMG_7295.jpeg';
 import './Hero.css';
 import BookingButton from '../shared/BookingButton';
 
 const Hero = () => {
     return (
-        <div className="relative h-screen">
+        <motion.section
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="relative h-screen"
+        >
             {/* Background Image with negative margin to offset navbar */}
             <div className="absolute inset-0 -mt-16">
                 <img
@@ -37,7 +43,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.section>
     );
 };
 

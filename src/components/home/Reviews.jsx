@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { motion } from 'framer-motion';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Reviews.css';
@@ -75,7 +76,13 @@ const Reviews = () => (
             </div>
             <Slider {...settings}>
                 {testimonials.map((testimonial, idx) => (
-                    <div key={idx} className="px-4 py-8">
+                    <motion.div
+                        key={idx}
+                        className="px-4 py-8"
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7, ease: 'easeOut' }}
+                    >
                         <div className="bg-white rounded-3xl shadow-xl p-10 flex flex-col items-center relative">
                             <span className="absolute left-6 top-6 text-4xl text-primary opacity-30">“</span>
                             <img
@@ -95,7 +102,7 @@ const Reviews = () => (
                             </div>
                             <h3 className="font-bold text-secondary text-lg">{testimonial.name}</h3>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </Slider>
         </div>

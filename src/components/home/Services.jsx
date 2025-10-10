@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Services = () => {
     const services = [
@@ -39,8 +40,12 @@ const Services = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{ duration: 0.7, delay: index * 0.15 }}
                             className="bg-pink-100 hover:bg-pink-200 rounded-2xl p-8 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group"
                         >
                             <div className="text-5xl mb-6 transform group-hover:rotate-12 transition-transform duration-300">
@@ -52,7 +57,7 @@ const Services = () => {
                             <p className="text-gray-600 mb-6">
                                 {service.description}
                             </p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
