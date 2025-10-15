@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Example images (replace with your own)
-import owner1 from '../../assets/images/image.jpeg';
+import owner1 from '../../assets/images/Image.jpeg';
 import timeline1 from '../../assets/images/IMG_1477.jpeg';
 import timeline2 from '../../assets/images/IMG_2149.jpeg';
 import timeline3 from '../../assets/images/IMG_7295.jpeg';
