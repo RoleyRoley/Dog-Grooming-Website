@@ -1,49 +1,60 @@
-# Dog Grooming Website
+# The Dog and Collar – Dog Grooming Website
 
-Welcome to the Dog Grooming Website project! This project is designed to provide a modern, responsive platform for a local dog grooming business. 
+Welcome to the official website project for **The Dog and Collar**, a modern, responsive platform designed for a professional dog grooming business.
 
-## Features
+---
 
-- **Terms and Conditions**: Detailed information regarding the terms of service.
-- **Reviews**: Customer testimonials and feedback.
-- **About Us**: Information about the dog grooming business and its mission.
-- **Map Location**: An interactive map showing the business location.
-- **Opening Times**: Business hours for customer convenience.
-- **Contact Details**: Easy access to contact information and a contact form.
-- **Gallery**: A showcase of grooming services and happy pets.
-- **Booking System**: A link to a third-party booking system for appointments.
-- **News/Updates**: Latest news and updates related to the business.
-- **List of Services**: Comprehensive details of services offered.
-- **Social Media Links**: Links to the business's social media profiles.
+## 🚀 Overview
 
-## Installation
+This project is a feature-rich, single-page React application built to showcase services, enable bookings, and provide a seamless experience for both pet owners and staff. It is fully responsive, visually appealing, and easy to maintain or extend.
 
-1. Clone the repository:
-   ```
+---
+
+## ✨ Features
+
+- **Modern Home Page**: Eye-catching hero section, animated service highlights, and customer reviews.
+- **Gallery**: Easily managed, responsive photo gallery with dog names on hover and fullscreen lightbox viewing.
+- **Booking Integration**: Direct link to a third-party booking system for hassle-free appointments.
+- **Contact Page**: Interactive map, business hours, clickable contact details, and address.
+- **Careers**: Information for table rental and work experience opportunities.
+- **Customer Reviews**: Rotating testimonials with customer photos.
+- **News & Updates**: Section for latest business news.
+- **FAQ**: Frequently asked questions for customer support.
+- **Terms & Conditions**: Downloadable PDF for business policies.
+- **Social Media Links**: Quick access to Facebook, Instagram, and TikTok.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop.
+- **Animated UI**: Smooth fade-in effects and interactive elements using Framer Motion and Tailwind CSS.
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (JavaScript/JSX)
+- **Tailwind CSS** (utility-first styling)
+- **Framer Motion** (animations)
+- **Google Maps Embed**
+- **Modern CSS** (component and global styles)
+
+---
+
+## 🚦 Getting Started
+
+1. **Clone the repository:**
+   ```bash
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
-   ```
+2. **Navigate to the project directory:**
+   ```bash
    cd dog-grooming-website
    ```
-3. Install the dependencies:
-   ```
+3. **Install dependencies:**
+   ```bash
    npm install
    ```
+4. **Start the development server:**
+   ```bash
+   npm start
+   ```
+   The app will be available at [http://localhost:3000](http://localhost:3000).
 
-## Usage
-
-To start the development server, run:
-```
-npm start
-```
-
-The application will be available at `http://localhost:3000`.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
