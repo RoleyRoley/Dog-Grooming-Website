@@ -8,7 +8,7 @@ const FAQ = () => {
             id: 1,
             category: 'Booking',
             question: 'How do I book an appointment?',
-            answer: 'You can book online through our website using our booking system, or call us directly at [phone number]. We recommend booking in advance, especially during busy periods like holidays.'
+            answer: 'You can book online through our website using our booking system, or call us directly at 07541 623364. We recommend booking in advance, especially for busy periods like holidays.'
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ const FAQ = () => {
             id: 3,
             category: 'Services',
             question: 'Do you groom all breeds and sizes?',
-            answer: 'Yes, we welcome all breeds and sizes from tiny Chihuahuas to gentle giants like Great Danes. Our experienced team is trained to work with various coat types and temperaments, ensuring every dog receives appropriate care.'
+            answer: 'Yes, we welcome all breeds and sizes from tiny Chihuahuas to giant Great Danes. Our experienced team is trained to work with various coat types and temperaments, ensuring every dog receives appropriate care.'
         },
         {
             id: 4,
@@ -32,7 +32,7 @@ const FAQ = () => {
             id: 5,
             category: 'Services',
             question: 'How long does a grooming appointment take?',
-            answer: 'A full groom typically takes 2-4 hours depending on your dog\'s size, coat condition, and behavior. Bath & dry services usually take 1-2 hours. We\'ll give you an estimated pickup time when you drop off.'
+            answer: 'A full groom typically takes 1h 30m - 3 hours depending on your dog\'s size, coat condition, and behavior. Bath & dry services usually take 1-2 hours. We\'ll give you an estimated pickup time when you drop off.'
         },
         {
             id: 6,
@@ -44,25 +44,25 @@ const FAQ = () => {
             id: 7,
             category: 'Health',
             question: 'What if my dog has fleas or skin conditions?',
-            answer: 'Please inform us of any known health issues when booking. We can work with mild skin conditions and offer flea treatments, but severe cases may require veterinary attention first. We\'ll always discuss options with you.'
+            answer: 'Please inform us of any known health issues when booking. We can work with mild skin conditions, but severe cases may require veterinary attention first. We\'ll always discuss options with you.'
         },
         {
             id: 8,
             category: 'Behavior',
             question: 'My dog is nervous/aggressive. Can you still groom them?',
-            answer: 'We have experience with anxious and reactive dogs. Please inform us about your dog\'s temperament when booking. We offer puppy introduction sessions to help nervous dogs get comfortable, and we use gentle handling techniques.'
+            answer: 'We have experience with anxious and reactive dogs. Please inform us about your dog\'s temperament when booking. We offer puppy introduction sessions to help nervous dogs get comfortable.'
         },
         {
             id: 9,
             category: 'Services',
             question: 'Do you offer nail trimming only?',
-            answer: 'Yes! While we don\'t list it as a separate service, we can do nail trims as part of our bath & dry service or as an add-on. Please call us to discuss your specific needs.'
+            answer: 'Yes of course!'
         },
         {
             id: 10,
             category: 'Booking',
             question: 'What is your cancellation policy?',
-            answer: 'We require at least 24 hours notice for cancellations. Last-minute cancellations or no-shows may incur a fee. We understand emergencies happen, so please call us to discuss your situation.'
+            answer: 'We require at least 48 hours notice for cancellations. Last-minute cancellations or no-shows may incur a fee of 50%. We understand emergencies happen, so please contact us to discuss your situation.'
         },
         {
             id: 11,

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/social media logo salon.png';
 
+
 const Footer = () => {
   const navigate = useNavigate();
 
@@ -33,7 +34,7 @@ const Footer = () => {
             <Link to="/faq" className="hover:text-primary transition">FAQ</Link>
             <Link to="/careers" className="hover:text-primary transition">Careers</Link>
             <a
-              href="/src/assets/The Dog and Collar T&C (2).pdf"
+              href="/The Dog and Collar T&Cs.pdf"
               download
               className="hover:text-primary transition"
             >
