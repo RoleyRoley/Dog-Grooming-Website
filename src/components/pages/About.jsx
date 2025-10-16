@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 // Example images (replace with your own)
 import owner1 from '../../assets/images/Image.jpeg';
-import timeline1 from '../../assets/images/IMG_1477.jpeg';
+import timeline1 from '../../assets/images/Salon Photos/homesalonout2.jpeg';
 import timeline2 from '../../assets/images/IMG_2149.jpeg';
 import timeline3 from '../../assets/images/IMG_7295.jpeg';
 
 const team = [
-  { name: "Alex Smith", role: "Co-Owner & Head Groomer", photo: owner1 },
-  { name: "Jamie Lee", role: "Co-Owner & Salon Manager", photo: owner1 },
+  { name: "Anna Pavey", role: "Co-Owner & Head Groomer", photo: owner1 },
+  { name: "Sian Leigh Hobbs", role: "Co-Owner & Head Groomer", photo: owner1 },
   // Add more staff here
 ];
 
@@ -17,17 +17,17 @@ const timeline = [
   {
     year: "2021",
     description: "Started in a home salon. Our journey began with a passion for dogs and a single grooming table in a cozy home setting.",
-    image: timeline1,
+    images: [timeline1, timeline2], // Multiple images
   },
   {
     year: "2023",
     description: "Relocated to a new high street salon. With growing demand, we moved to a bright, modern space in the heart of town.",
-    image: timeline2,
+    images: [timeline2, timeline3, timeline1], // Multiple images 
   },
   {
     year: "2025",
     description: "Merged with a local groomer and formed a limited company. The salon was redesigned to offer even more comfort and style for our furry clients.",
-    image: timeline3,
+    images: [timeline3], // Single image
   },
 ];
 
@@ -40,9 +40,80 @@ const fadeIn = {
   }),
 };
 
+// Enhanced Carousel Component for both Desktop and Mobile
+const ImageCarousel = ({ images, year, isDesktop = false }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className={`relative ${isDesktop ? 'w-80 h-96' : 'w-full max-w-xs'} mx-auto`}>
+      {/* Image Container */}
+      <div className="overflow-hidden rounded-2xl shadow-xl border-2 border-primary/20">
+        <div 
+          className="flex transition-transform duration-300 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((image, idx) => (
+            <img
+              key={idx}
+              src={image}
+              alt={`${year} - Photo ${idx + 1}`}
+              className={`${isDesktop ? 'w-80 h-96' : 'w-full h-96'} object-cover flex-shrink-0`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Arrows */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prevImage}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-black/70 transition-colors"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </>
+      )}
+
+      {/* Dots Indicator */}
+      {images.length > 1 && (
+        <div className="flex justify-center mt-4 space-x-2">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                idx === currentIndex ? 'bg-primary' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const About = () => (
   <section className="py-16 px-4 bg-white min-h-screen">
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-6xl mx-auto">
       {/* Meet the Team */}
       <motion.div
         initial="hidden"
@@ -102,37 +173,76 @@ const About = () => (
         variants={fadeIn}
       >
         <h2 className="text-2xl font-bold text-primary mb-8 text-center">Our Journey</h2>
-        <div className="flex flex-col gap-16">
-          {timeline.map((event, idx) => {
-            const isLeft = idx % 2 === 0;
-            return (
-              <motion.div
-                key={event.year}
-                custom={idx}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={fadeIn}
-                className={`flex flex-col md:flex-row items-center md:items-stretch gap-8`}
-              >
-                {/* Text Side */}
-                <div className={`md:w-1/2 ${isLeft ? 'md:order-1' : 'md:order-2'} order-1 flex flex-col justify-center`}>
-                  <div className="text-primary font-bold text-lg mb-2">{event.year}</div>
-                  <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-primary/10 text-gray-700 text-base text-center md:text-left">
-                    {event.description}
+        <div className="relative">
+          {/* Central vertical line - Desktop only */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 -translate-x-1/2 z-0"></div>
+          
+          <div className="flex flex-col gap-24">
+            {timeline.map((event, idx) => {
+              const isLeft = idx % 2 === 0;
+              return (
+                <motion.div
+                  key={event.year}
+                  custom={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.2 }}
+                  variants={fadeIn}
+                  className="relative flex flex-col md:flex-row items-center md:items-start"
+                >
+                  {/* Desktop Layout */}
+                  <div className="hidden md:flex w-full items-start">
+                    {/* Left Side */}
+                    <div className={`w-1/2 flex ${isLeft ? 'justify-end pr-12' : 'justify-start pl-12'}`}>
+                      {isLeft ? (
+                        <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-primary/10 max-w-md w-full mt-8">
+                          <div className="text-primary font-bold text-2xl mb-4">{event.year}</div>
+                          <div className="text-gray-700 text-base leading-relaxed">{event.description}</div>
+                        </div>
+                      ) : (
+                        <ImageCarousel images={event.images} year={event.year} isDesktop={true} />
+                      )}
+                    </div>
+
+                    {/* Center Timeline Dot */}
+                    <div className="relative z-10 flex items-center justify-center mt-20">
+                      <div className="w-6 h-6 rounded-full bg-primary border-4 border-white shadow-lg"></div>
+                    </div>
+
+                    {/* Right Side */}
+                    <div className={`w-1/2 flex ${!isLeft ? 'justify-start pl-12' : 'justify-end pr-12'}`}>
+                      {!isLeft ? (
+                        <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-8 border border-primary/10 max-w-md w-full mt-8">
+                          <div className="text-primary font-bold text-2xl mb-4">{event.year}</div>
+                          <div className="text-gray-700 text-base leading-relaxed">{event.description}</div>
+                        </div>
+                      ) : (
+                        <ImageCarousel images={event.images} year={event.year} isDesktop={true} />
+                      )}
+                    </div>
                   </div>
-                </div>
-                {/* Image Side */}
-                <div className={`md:w-1/2 ${isLeft ? 'md:order-2' : 'md:order-1'} order-2 flex justify-center items-center`}>
-                  <img
-                    src={event.image}
-                    alt={event.year}
-                    className="w-full max-w-xs md:max-w-md h-48 md:h-56 object-cover rounded-2xl shadow-lg border-2 border-primary/20"
-                  />
-                </div>
-              </motion.div>
-            );
-          })}
+
+                  {/* Mobile Layout */}
+                  <div className="md:hidden w-full">
+                    {/* Year Badge */}
+                    <div className="flex justify-center mb-4">
+                      <div className="bg-primary text-white px-6 py-2 rounded-full font-bold text-xl">
+                        {event.year}
+                      </div>
+                    </div>
+                    
+                    {/* Text Card */}
+                    <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl p-6 border border-primary/10 mb-6">
+                      <div className="text-gray-700 text-base text-center leading-relaxed">{event.description}</div>
+                    </div>
+
+                    {/* Image Carousel */}
+                    <ImageCarousel images={event.images} year={event.year} isDesktop={false} />
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </motion.div>
     </div>
