@@ -5,24 +5,28 @@ import { motion } from 'framer-motion';
 const Services = () => {
     const services = [
         {
-            title: 'Full Grooming',
-            description: 'Complete grooming package including bath, haircut, and styling for all breeds.',
+            title: 'Full Groom',
+            description: 'Complete head-to-tail grooming with bath, styling, nail clipping, and ear cleaning.',
             icon: '✂️',
+            priceRange: 'From £35',
         },
         {
-            title: 'Bath & Brush',
-            description: 'Refresh your pet with our thorough cleaning and brushing service.',
+            title: 'Bath & Dry',
+            description: 'Perfect freshen-up service with thorough bath, blow dry, and basic brush out.',
             icon: '🛁',
+            priceRange: 'From £30',
         },
         {
-            title: 'Nail Trimming',
-            description: 'Keep your pet comfortable with professional nail care.',
-            icon: '💅',
+            title: 'Puppy Introductions',
+            description: 'Gentle introduction sessions to help your puppy get comfortable with grooming.',
+            icon: '🐶',
+            priceRange: 'From £25',
         },
         {
-            title: 'Spa Treatment',
-            description: 'Luxury pampering session for the most relaxing experience.',
+            title: 'Spa Extras',
+            description: 'Premium add-ons including teeth cleaning, paw fizz, facials, and treatment sprays.',
             icon: '✨',
+            priceRange: 'From £10',
         }
     ];
 
@@ -34,7 +38,7 @@ const Services = () => {
                         Our Services
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Discover our range of professional grooming services, tailored to make your pet look and feel amazing
+                        Professional grooming services tailored to your pet's needs and size
                     </p>
                 </div>
 
@@ -54,9 +58,12 @@ const Services = () => {
                             <h3 className="text-xl font-bold text-secondary mb-3">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 mb-6">
+                            <p className="text-gray-600 mb-4 flex-grow">
                                 {service.description}
                             </p>
+                            <div className="text-primary font-semibold text-lg">
+                                {service.priceRange}
+                            </div>
                         </motion.div>
                     ))}
                 </div>
@@ -66,7 +73,7 @@ const Services = () => {
                         to="/services"
                         className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-3 rounded-full hover:bg-opacity-90 transition-all duration-300 group"
                     >
-                        <span>View All Services</span>
+                        <span>View Full Pricing & Details</span>
                         <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                     </Link>
                 </div>

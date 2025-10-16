@@ -3,20 +3,37 @@ import React, { useState } from 'react';
 import img1 from '../../assets/images/IMG_1477.jpeg';
 import img2 from '../../assets/images/IMG_2149.jpeg';
 import img3 from '../../assets/images/IMG_7295.jpeg';
+import img4 from '../../assets/images/Dog Photos/Arlo.jpeg';
+import img5 from '../../assets/images/Dog Photos/Bertie.jpeg';
+import img6 from '../../assets/images/Dog Photos/Boo.jpeg';
+import img7 from '../../assets/images/Dog Photos/Bruno.jpeg';
+import img8 from '../../assets/images/Dog Photos/Jasper.jpeg';
+import img9 from '../../assets/images/Dog Photos/Jollibee.jpeg';
+import img10 from '../../assets/images/Dog Photos/Monty.jpeg';
+import img11 from '../../assets/images/Dog Photos/Peppa.jpeg';
+import img12 from '../../assets/images/Dog Photos/Poppy.jpeg';
+import img13 from '../../assets/images/Dog Photos/Teddy two.jpeg';
+import img14 from '../../assets/images/Dog Photos/Wilson.jpeg';
+import img15 from '../../assets/images/Dog Photos/Toby.jpeg';
+import img16 from '../../assets/images/Dog Photos/Teddy.jpeg';
 
 const galleryPhotos = [
-    { src: img1, name: "Bella" },
-    { src: img2, name: "Max" },
-    { src: img3, name: "Luna" },
-    { src: img1, name: "Bella" },
-    { src: img2, name: "Max" },
-    { src: img3, name: "Luna" },
-    { src: img1, name: "Bella" },
-    { src: img2, name: "Max" },
-    { src: img3, name: "Luna" },
-    { src: img1, name: "Bella" },
-    { src: img2, name: "Max" },
-    { src: img3, name: "Luna" },
+    { src: img1, name: "Scooby" },
+    { src: img2, name: "Ralph" },
+    { src: img3, name: "Penny" },
+    { src: img4, name: "Arlo" },
+    { src: img5, name: "Bertie" },
+    { src: img6, name: "Boo" },
+    { src: img7, name: "Bruno" },
+    { src: img8, name: "Jasper" },
+    { src: img9, name: "Jollibee" },
+    { src: img10, name: "Monty" },
+    { src: img11, name: "Peppa" },
+    { src: img12, name: "Poppy" },
+    { src: img13, name: "Teddy" },
+    { src: img14, name: "Wilson" },
+    { src: img15, name: "Toby" },
+    { src: img16, name: "Teddy" },
     // ...add more
 ];
 
