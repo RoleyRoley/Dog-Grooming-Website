@@ -13,12 +13,12 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="relative h-screen lg:pt-3"
         >
-            {/* Background Image with negative margin to offset navbar */}
+            {/* Background Image with responsive positioning */}
             <div className="absolute inset-0">
                 <img
                     src={dogGrooming}
                     alt="Dog Grooming"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover xl:object-[center_30%]"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
             </div>
