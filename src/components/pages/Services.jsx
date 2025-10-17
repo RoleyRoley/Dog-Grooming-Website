@@ -65,6 +65,13 @@ const Services = () => {
         'Perfume'
     ];
 
+    const spaPackageIncludes = [
+        'Paw fizz',
+        'Conditioner',
+        'Treatment spray',
+        'Facial'
+    ];
+
     const fadeIn = {
         hidden: { opacity: 0, y: 40 },
         visible: (i = 0) => ({
@@ -110,7 +117,7 @@ const Services = () => {
                         <div className="grid md:grid-cols-2 gap-8 mb-8">
                             {/* Long Haired */}
                             <div className="bg-white rounded-2xl p-6 shadow">
-                                <h3 className="text-xl font-semibold text-primary mb-4 text-center">Long Haired Breeds</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-4 text-center">Long Haired Breeds</h3>
                                 <div className="space-y-3">
                                     {fullGroomPricing.longHaired.map((item, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
@@ -123,7 +130,7 @@ const Services = () => {
 
                             {/* Short Haired */}
                             <div className="bg-white rounded-2xl p-6 shadow">
-                                <h3 className="text-xl font-semibold text-primary mb-4 text-center">Short Haired Breeds</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-4 text-center">Short Haired Breeds</h3>
                                 <div className="space-y-3">
                                     {fullGroomPricing.shortHaired.map((item, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
@@ -173,7 +180,7 @@ const Services = () => {
                         {/* Single Pricing Column */}
                         <div className="max-w-md mx-auto mb-8">
                             <div className="bg-white rounded-2xl p-6 shadow">
-                                <h3 className="text-xl font-semibold text-primary mb-4 text-center">Pricing</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-4 text-center">Pricing</h3>
                                 <div className="space-y-3">
                                     {bathAndDryPricing.map((item, index) => (
                                         <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0">
@@ -223,14 +230,14 @@ const Services = () => {
                         {/* Puppy Session Pricing */}
                         <div className="grid md:grid-cols-2 gap-8 mb-8">
                             <div className="bg-white rounded-2xl p-6 shadow">
-                                <h3 className="text-xl font-semibold text-primary mb-4 text-center">1st Session</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-4 text-center">1st Session</h3>
                                 <div className="text-center">
                                     <span className="text-2xl font-bold text-primary">£25</span>
                                     <p className="text-gray-600 mt-2">X-Small to X-Large</p>
                                 </div>
                             </div>
                             <div className="bg-white rounded-2xl p-6 shadow">
-                                <h3 className="text-xl font-semibold text-primary mb-4 text-center">2nd Session</h3>
+                                <h3 className="text-xl font-semibold text-secondary mb-4 text-center">2nd Session</h3>
                                 <div className="text-center">
                                     <span className="text-2xl font-bold text-primary">£35</span>
                                     <p className="text-gray-600 mt-2">X-Small to X-Large</p>
@@ -279,6 +286,77 @@ const Services = () => {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Book Now Button */}
+                        <div className="text-center">
+                            <BookingButton className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300" />
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Extras Section */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeIn}
+                    custom={5}
+                    className="mb-16"
+                >
+                    <div className="bg-gray-50 rounded-3xl shadow-xl p-8 md:p-12">
+                        <h2 className="text-3xl font-bold text-secondary mb-4 text-center">Extras</h2>
+                        <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto">
+                            Add a little extra care to your dog's visit with our range of Extras.
+                        </p>
+                        
+                        <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                            {/* Emmi-pet Teeth Cleaning */}
+                            <div className="bg-white rounded-2xl p-6 shadow">
+                                <h3 className="text-xl font-bold text-secondary mb-4 text-center">Emmi-pet Teeth Cleaning</h3>
+                                <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                                    Our salon is fully certified in Emmi-pet ultrasonic teeth cleaning — a non-invasive treatment designed to improve your dog's oral hygiene without discomfort. Emmi-pet system uses ultrasonic technology to remove plaque and bacteria deep below the gum line, helping to prevent bad breath, gum disease, and tooth loss.
+                                </p>
+                                <div className="space-y-3">
+                                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                                        <span className="font-medium text-gray-700">1st Session</span>
+                                        <span className="text-primary font-semibold">£50</span>
+                                    </div>
+                                    <div className="flex justify-between items-center py-4">
+                                        <span className="font-medium text-gray-700">Maintenance Sessions</span>
+                                        <span className="text-primary font-semibold">£30</span>
+                                    </div>
+                                </div>
+                                <div className="text-center mb-2">
+                                    <p className="text-gray-600 text-sm">X-Small to X-Large (per dog)</p>
+                                </div>
+                            </div>
+
+                            {/* Spa Package */}
+                            <div className="bg-white rounded-2xl p-6 shadow">
+                                <h3 className="text-xl font-bold text-secondary mb-4 text-center">Spa Packages</h3>
+                                <p className="text-gray-700 text-sm mb-6 text-center">
+                                    Give your pup the ultimate pampering with our all-in-one spa package.
+                                </p>
+                                <div className="mb-4">
+                                    <h4 className="font-semibold text-secondary mb-2 text-center">All-in-one Spa Package</h4>
+                                    <div className="text-center mb-4">
+                                        <span className="text-2xl font-bold text-primary">£10</span>
+                                        <p className="text-gray-600 text-sm">X-Small to X-Large (per dog)</p>
+                                    </div>
+                                </div>
+                                <div className="bg-gray-50 rounded-xl p-4">
+                                    <h5 className="font-medium text-secondary mb-3 text-center">What's Included</h5>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        {spaPackageIncludes.map((item, index) => (
+                                            <div key={index} className="flex items-center text-gray-700">
+                                                <span className="text-primary mr-2">✓</span>
+                                                <span className="text-sm">{item}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Book Now Button */}

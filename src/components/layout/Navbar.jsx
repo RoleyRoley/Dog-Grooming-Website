@@ -89,13 +89,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Link
-            to="/booking"
-            className="block px-3 py-2 text-primary font-semibold hover:text-opacity-90"
-            onClick={() => setIsOpen(false)}
-          >
-            Book Now
-          </Link>
+          <BookingButton className="block px-3 py-2 text-primary font-semibold hover:text-opacity-90" />
         </div>
       </div>
     </nav>
@@ -103,3 +97,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

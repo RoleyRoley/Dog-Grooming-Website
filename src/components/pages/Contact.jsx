@@ -37,12 +37,28 @@ const Contact = () => {
                             <table className="text-gray-700 text-sm sm:text-base mx-auto md:mx-0">
                                 <tbody>
                                     <tr>
-                                        <td className="pr-4">Mon - Fri:</td>
-                                        <td className="font-semibold">9:00 AM – 5:00 PM</td>
+                                        <td className="pr-4">Monday:</td>
+                                        <td className="font-semibold">8:00 AM – 5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="pr-4">Tuesday:</td>
+                                        <td className="font-semibold">8:00 AM – 5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="pr-4">Wednesday:</td>
+                                        <td className="font-semibold">Closed</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="pr-4">Thursday:</td>
+                                        <td className="font-semibold">8:00 AM – 5:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="pr-4">Friday:</td>
+                                        <td className="font-semibold">8:00 AM – 5:00 PM</td>
                                     </tr>
                                     <tr>
                                         <td className="pr-4">Saturday:</td>
-                                        <td className="font-semibold">10:00 AM – 4:00 PM</td>
+                                        <td className="font-semibold">Closed</td>
                                     </tr>
                                     <tr>
                                         <td className="pr-4">Sunday:</td>

@@ -8,44 +8,66 @@ import './Reviews.css';
 import img1 from '../../assets/images/IMG_1477.jpeg';
 import img2 from '../../assets/images/IMG_2149.jpeg';
 import img3 from '../../assets/images/IMG_7295.jpeg';
+import img4 from '../../assets/images/social media logo salon.png';
+
 
 const testimonials = [
     {
-        name: "Sarah Johnson",
-        review: "Absolutely fantastic service! My dog always comes back looking and smelling amazing. The staff are so caring and professional.",
+        name: "Willow",
+        review: "Willow always looks and smells amazing after every groom! I wouldn't take her anywhere else!",
         rating: 5,
-        image: img1
+        image: img4
     },
     {
-        name: "Mark Wilson",
-        review: "Best grooming salon in the area. They really understand different breed requirements and are so gentle with nervous dogs.",
+        name: "Lena",
+        review: "I certainly recommend trusting your canine family member to the Dog and Collar.",
         rating: 5,
-        image: img2
+        image: img4
     },
     {
-        name: "Emma Thompson",
-        review: "I wouldn't trust anyone else with my furry friend. The attention to detail is outstanding.",
+        name: "Tessa",
+        review: "Very caring and gentle with my dog, wanting to give her the best experience. Tessa came out of it looking lovely.",
         rating: 5,
-        image: img3
+        image: img4
     },
     {
-        name: "Sarah Johnson 2",
-        review: "Absolutely fantastic service! My dog always comes back looking and smelling amazing. The staff are so caring and professional.",
+        name: "Barney",
+        review: "I wouldn’t trust anyone else to cut his hair or brush his teeth now...I couldn’t recommend more.",
         rating: 5,
-        image: img1
+        image: img4
     },
     {
-        name: "Mark Wilson 3",
-        review: "Best grooming salon in the area. They really understand different breed requirements and are so gentle with nervous dogs.",
+        name: "Helga",
+        review: "They really care about what they do and I trust them completely with Helga! She comes out looking amazing and smelling delicious!",
         rating: 5,
-        image: img2
+        image: img4
     },
     {
-        name: "Emma Thompson 4",
-        review: "I wouldn't trust anyone else with my furry friend. The attention to detail is outstanding.",
+        name: "Ivy",
+        review: "Ivy was pampered and loved being groomed.",
         rating: 5,
-        image: img3
+        image: img4
     },
+    {
+        name: "Reggie",
+        review: "I cannot thank The Dog and Collar enough for such an amazing job with my boy Reggie. Would definitely recommend to all my friends and family.",
+        rating: 5,
+        image: img4
+    },
+    {
+        name: "",
+        review: "100% recommend, the ladies are so friendly and helpful, by far the best dog groomers. Thank you ladies so much!",
+        rating: 5,
+        image: img4
+    },
+    {
+        name: "Suki",
+        review: "We took Suki for her first groom since we rescued her. She was very nervous but when picked her up she was so happy and looked gorgeous.",
+        rating: 5,
+        image: img4
+    },
+
+
 ];
 
 const settings = {
