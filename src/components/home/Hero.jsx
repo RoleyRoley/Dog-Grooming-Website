@@ -30,7 +30,7 @@ const Hero = () => {
                         Professional Dog Grooming Services
                     </h1>
                     <p className="text-xl md:text-2xl text-white mb-8">
-                        Giving your furry friends the care and style they deserve
+                        Expert grooming with a gentle touch
                     </p>
                     <div className="space-x-4">
                         <BookingButton className="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300"/>
