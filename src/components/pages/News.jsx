@@ -8,12 +8,12 @@ const News = () => {
         {
             id: 1,
             type: 'announcement',
-            title: 'New Emmi-pet Teeth Cleaning Service Now Available!',
+            title: 'Emmi-pet Teeth Cleaning Service Now Available!',
             date: '2025-10-15',
             content: 'We\'re excited to announce that we\'re now fully certified in Emmi-pet ultrasonic teeth cleaning! This gentle, non-invasive treatment helps improve your dog\'s oral hygiene without stress or discomfort.',
             image: null,
             featured: true,
-            tags: ['New Service', 'Health']
+            tags: ['Services', 'Health']
         },
         {
             id: 2,
