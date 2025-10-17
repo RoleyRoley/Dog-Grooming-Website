@@ -38,7 +38,7 @@ const FAQ = () => {
             id: 6,
             category: 'Preparation',
             question: 'Should I feed my dog before the appointment?',
-            answer: 'We recommend a light meal 2-3 hours before the appointment. Avoid feeding your dog immediately before grooming as some dogs can get anxious or nauseous. Always ensure they\'ve had water throughout the day.'
+            answer: 'We recommend sticking to your usual feeding routine. Avoid feeding your dog immediately before grooming as some dogs can get anxious or nauseous. Always ensure they\'ve had water throughout the day.'
         },
         {
             id: 7,
@@ -68,7 +68,7 @@ const FAQ = () => {
             id: 11,
             category: 'Health',
             question: 'Do you require vaccinations?',
-            answer: 'Yes, we require up-to-date vaccinations for the safety of all pets in our salon. Please bring proof of current rabies, DHPP, and Bordetella vaccinations, or have your vet send records directly.'
+            answer: 'While we don\'t require vaccinations to groom your dog, we do recommend that pets are up-to-date with their vaccinations for their own health and wellbeing. Please let us know if your dog has any health concerns when booking.'
         },
         {
             id: 12,
@@ -228,7 +228,7 @@ const FAQ = () => {
                             Contact Us
                         </a>
                         <a
-                            href="tel:+44-xxx-xxx-xxxx"
+                            href="tel:07541623364"
                             className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white rounded-full hover:bg-opacity-90 transition-all duration-300"
                         >
                             Call Now

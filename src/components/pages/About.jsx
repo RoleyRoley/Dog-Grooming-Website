@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, time } from 'framer-motion';
 
 // Example images (replace with your own)
 import owner1 from '../../assets/images/Image.jpeg';
-import timeline1 from '../../assets/images/Salon Photos/homesalonout2.jpeg';
-import timeline2 from '../../assets/images/IMG_2149.jpeg';
-import timeline3 from '../../assets/images/IMG_7295.jpeg';
+import timeline1 from '../../assets/images/Salon Photos/homesalonout.jpeg';
+import timeline2 from '../../assets/images/Salon Photos/homesalonout2.jpeg';
+import timeline3 from '../../assets/images/Salon Photos/homesalontable.jpeg';
+import timeline4 from '../../assets/images/Salon Photos/posthomesalon.jpeg';
+import timeline5 from '../../assets/images/Salon Photos/newsalontables.jpeg';
+import timeline6 from '../../assets/images/Salon Photos/newsalon.jpg';
+import timeline7 from '../../assets/images/Salon Photos/newsalonbaths.jpeg';
 
 const team = [
   { name: "Anna Pavey", role: "Co-Owner & Head Groomer", photo: owner1 },
@@ -17,17 +21,17 @@ const timeline = [
   {
     year: "2021",
     description: "Started in a home salon. Our journey began with a passion for dogs and a single grooming table in a cozy home setting.",
-    images: [timeline1, timeline2], // Multiple images
+    images: [timeline1, timeline2, timeline3], 
   },
   {
     year: "2023",
     description: "Relocated to a new high street salon. With growing demand, we moved to a bright, modern space in the heart of town.",
-    images: [timeline2, timeline3, timeline1], // Multiple images 
+    images: [timeline4], 
   },
   {
     year: "2025",
     description: "Merged with a local groomer and formed a limited company. The salon was redesigned to offer even more comfort and style for our furry clients.",
-    images: [timeline3], // Single image
+    images: [timeline5, timeline6, timeline7], 
   },
 ];
 
