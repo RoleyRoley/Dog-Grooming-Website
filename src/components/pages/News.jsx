@@ -12,7 +12,7 @@ const News = () => {
             date: '2025-10-15',
             content: 'We\'re excited to announce that we\'re now fully certified in Emmi-pet ultrasonic teeth cleaning! This gentle, non-invasive treatment helps improve your dog\'s oral hygiene without stress or discomfort.',
             image: null,
-            featured: true,
+            featured: false,
             tags: ['Services', 'Health']
         },
         {
@@ -32,15 +32,15 @@ const News = () => {
             date: '2025-10-01',
             content: 'Get your pup ready for the holidays! Christmas grooming appointments are now available. Book early to secure your preferred time slot during our busiest season.',
             image: null,
-            featured: false,
+            featured: true,
             tags: ['Seasonal', 'Booking']
         },
         {
             id: 4,
             type: 'tip',
             title: 'Winter Coat Care Tips',
-            date: '2025-09-28',
-            content: 'As the weather gets colder, here are some tips to keep your dog\'s coat healthy: brush regularly to prevent matting, use a moisturizing shampoo, and consider a protective coat for outdoor walks.',
+            date: '2025-10-17',
+            content: 'As the weather gets colder, here are some tips to keep your dog\'s coat healthy: brush regularly to prevent matting and consider a protective coat for outdoor walks.',
             image: null,
             featured: false,
             tags: ['Tips', 'Winter Care']
@@ -48,18 +48,31 @@ const News = () => {
         {
             id: 5,
             type: 'celebration',
-            title: 'Thank You for 1000+ Happy Customers!',
-            date: '2025-09-20',
-            content: 'We\'re thrilled to celebrate grooming over 1000 happy dogs! Thank you to all our wonderful customers who trust us with their furry family members. Here\'s to many more tail-wagging transformations!',
+            title: '6 months since our merger!',
+            date: '2025-10-07',
+            content: 'Half a year since our merger and we\'re thrilled with the progress! The combined experience of our teams has allowed us to enhance our service quality, introduce new treatments like Emmi-pet teeth cleaning, and serve even more happy customers.',
             image: null,
             featured: false,
-            tags: ['Milestone', 'Thank You']
-        }
+            tags: ['Milestone']
+        },
+        {
+            id: 6,
+            type: 'announcement',
+            title: 'Exciting News: We\'ve Merged with Glamorous Grooms!',
+            date: '2025-04-07',
+            content: 'We\'re excited to announce our merger with Sian at Glamorous Grooms! This partnership will allows us to offer even more services and expertise to our valued clients.',
+            image: null,
+            featured: false,
+            tags: ['Milestone']
+        },
     ];
 
     const [selectedCategory, setSelectedCategory] = useState('all');
 
     const categories = ['all', 'announcement', 'update', 'seasonal', 'tip', 'celebration'];
+
+    // Sort news items by date (newest first)
+    const sortedNewsItems = [...newsItems].sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const getTypeIcon = (type) => {
         const icons = {
@@ -83,11 +96,12 @@ const News = () => {
         return colors[type] || 'bg-gray-100 text-gray-800';
     };
 
+    // Filter the sorted news items
     const filteredNews = selectedCategory === 'all' 
-        ? newsItems 
-        : newsItems.filter(item => item.type === selectedCategory);
+        ? sortedNewsItems 
+        : sortedNewsItems.filter(item => item.type === selectedCategory);
 
-    const featuredNews = newsItems.filter(item => item.featured);
+    const featuredNews = sortedNewsItems.filter(item => item.featured);
     const regularNews = filteredNews.filter(item => !item.featured);
 
     const fadeIn = {
