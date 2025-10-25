@@ -46,10 +46,14 @@ const Services = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 15 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{ duration: 0.7, delay: index * 0.15 }}
+                            viewport={{ once: true, amount: 0.5, margin: "0px 0px -100px 0px" }}
+                            transition={{ 
+                                duration: 0.6, 
+                                delay: index * 0.1,
+                                ease: [0.25, 0.46, 0.45, 0.94]
+                            }}
                             className="bg-pink-100 hover:bg-pink-200 rounded-2xl p-8 hover:scale-105 transition-all duration-300 flex flex-col items-center text-center group"
                         >
                             <div className="text-5xl mb-6 transform group-hover:rotate-12 transition-transform duration-300">
